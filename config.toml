@@ -1,0 +1,4 @@
+languageCode = "en-us"
+title = "Curso de Sueco"
+baseURL = "http://cursodesueco.com.br/"
+theme = "black-and-light"

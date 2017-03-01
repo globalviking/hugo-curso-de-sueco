@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<section id=content>
+  <h1>Curso de Sueco</h1>
+  <p>Curso de sueco online, na sua casa ou no seu trabalho.</p>
+  <img src="bandeira-da-suecia.png" alt="Bandeira da suécia">
+  <p>Faça uma aula grátis</p>
+  <p>contato@cursodesueco.com.br</p>
+  <ul class=posts_listing>
+    {{ range .Data.Pages.ByPublishDate }}
+      <li>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div id=date>
+          <time>{{ .Date.Format (.Site.Params.dateform | default "January 2006") }}</time>
+        </div>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+
+{{ partial "footer.html" . }}
+
